@@ -12,7 +12,7 @@ var LocalRedis *goredis.Client
 // 	初始化本地redis
 func Init() {
 	conf := new(config)
-	LoadConf(conf, "../conf/conf.yaml")
+	LoadConf(conf, "../../conf/conf.yaml")
 	fmt.Println(conf)
 	LocalRedis = conf.LocalRedis.NewRedisClient()
 }
